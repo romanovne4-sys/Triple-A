@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="header__logo-link"><img class="header__logo-img logo" src="images/logo.svg" alt="Triple A."></a>
+
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link nav__link--active">Solutions</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Resources</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Company</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="header__login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        <section class="login section__box">
+            <h1 class="login__title section__title">Welcome</h1>
+
+            <div class="login__form-wrap">
+                <form class="form" action="#" method="post" novalidate>
+
+                    <div class="form__fields">
+                        <div class="form__group">
+                            <label class="form__label" for="email">Email</label>
+                            <input class="form__input" type="email" id="email" name="email" placeholder="Enter your email..." autocomplete="email">
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="password">Password</label>
+                            <input class="form__input" type="password" id="password" name="password" placeholder="Enter your password..." autocomplete="current-password">
+                        </div>
+                    </div>
+
+                    <div class="form__submit">
+                        <button class="btn btn--primary" type="submit">Login</button>
+                    </div>
+
+                    <div class="form__links">
+                        <a href="#" class="form__link">Forgot password?</a>
+                        <p class="form__contact-text">
+                            Don't have an account yet?
+                            <a href="#" class="form__link form__link--underline">Click here</a>
+                        </p>
+
+                    </div>
+
+                    <p class="form__contact">
+                        Please contact us at
+                        <a href="mailto:support@triple-a.io" class="form__contact-link">support@triple-a.io</a> if you have any questions.
+                    </p>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
