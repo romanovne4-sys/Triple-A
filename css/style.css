@@ -826,7 +826,7 @@ iframe {
 spline-viewer {
     min-height: 100vh;
     position: absolute;
-    top: -1.4vw;
+    /* top: -1.4vw; */
     margin-bottom: 100px;
 }
 .overplay{
