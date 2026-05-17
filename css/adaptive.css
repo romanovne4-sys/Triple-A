@@ -369,7 +369,7 @@
   }
 
   .lead__title {
-    margin-top: 70px;
+    /* margin-top: 70px; */
     margin-left: 0;
     font-size: 11vw;
     margin-bottom: 10vw;
