@@ -329,13 +329,19 @@
         display: none;
     }
   .hero__inner {
-    background-image: url(../images/hero-bg.png);
+    /* background-image: url(../images/Group.webp);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 
     padding-top: 120px;
     height: auto;
     min-height: 100vh;
+  }
+  .bg{
+    padding: 40px 0;
+     background-image: url(../images/Group.webp);
+    background-size: cover;
+    background-position: center;
   }
   .spline-viewer{
     height: 135vh;
