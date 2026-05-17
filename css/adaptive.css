@@ -329,13 +329,13 @@
         display: none;
     }
   .hero__inner {
-    background-image: url(../images/hero-bg.png);
+    background-image: url(../images/image12.png);
     background-size: cover;
     background-position: center;
 
     padding-top: 120px;
     height: auto;
-    min-height: 100vh;
+    height: 100vh;
   }
   .bg{
     padding: 40px 0;
