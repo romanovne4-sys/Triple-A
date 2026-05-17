@@ -1,0 +1,311 @@
+/* ---- Кнопка ---- */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 44px;
+  height: 44px;
+  cursor: none;
+  background: none;
+  border: none;
+  padding: 0;
+  position: relative;
+  z-index: 10000;
+  flex-shrink: 0;
+}
+
+.burger__line {
+  display: block;
+  height: 1.5px;
+  background-color: #fff;
+  border-radius: 2px;
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 0.3s ease,
+              width 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger__line:nth-child(1) { width: 24px; margin-bottom: 6px; }
+.burger__line:nth-child(2) { width: 24px; }
+.burger__line:nth-child(3) { width: 16px; margin-top: 6px; }
+
+.burger:not(.is-active):hover .burger__line:nth-child(3) {
+  width: 24px;
+}
+
+.burger.is-active .burger__line:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.burger.is-active .burger__line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.burger.is-active .burger__line:nth-child(3) {
+  width: 24px;
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ---- Затемнение фона ---- */
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9997;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.nav-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---- Боковая панель ---- */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(340px, 88vw);
+  z-index: 9998;
+  background: #080808;
+  border-left: 0.5px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.nav-overlay.is-open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* ---- Шапка ---- */
+.nav-overlay__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 28px 0;
+  flex-shrink: 0;
+}
+
+.nav-overlay__logo img {
+  width: 90px;
+  display: block;
+}
+
+.nav-overlay__close {
+  width: 34px;
+  height: 34px;
+  border: 0.5px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  background: none;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.nav-overlay__close:hover {
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.04);
+}
+
+.nav-overlay__close svg {
+  width: 14px;
+  height: 14px;
+  stroke: rgba(255,255,255,0.55);
+  flex-shrink: 0;
+  display: block;
+}
+
+/* ---- Разделитель ---- */
+.nav-overlay__divider {
+  height: 0.5px;
+  background: rgba(255,255,255,0.06);
+  margin: 24px 28px 0;
+  flex-shrink: 0;
+}
+
+/* ---- Ссылки ---- */
+.nav-overlay__list {
+  list-style: none;
+  padding: 6px 0 0;
+  margin: 0;
+  flex: 1;
+}
+
+.nav-overlay__item {
+  opacity: 0;
+  transform: translateX(16px);
+  transition: opacity 0.45s cubic-bezier(0.23, 1, 0.32, 1),
+              transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nav-overlay__item:nth-child(1) { transition-delay: 0.07s; }
+.nav-overlay__item:nth-child(2) { transition-delay: 0.12s; }
+.nav-overlay__item:nth-child(3) { transition-delay: 0.17s; }
+.nav-overlay__item:nth-child(4) { transition-delay: 0.22s; }
+
+.nav-overlay.is-open .nav-overlay__item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-overlay__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.nav-overlay__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 28px;
+  right: 28px;
+  height: 0.5px;
+  background: rgba(255,255,255,0.05);
+}
+
+.nav-overlay__link:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.025);
+}
+
+.nav-overlay__link svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity 0.2s, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  flex-shrink: 0;
+}
+
+.nav-overlay__link:hover svg {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ---- Login кнопка ---- */
+.nav-overlay__login {
+  display: block;
+  margin: 16px 28px;
+  padding: 13px 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #B2B2B2;
+  border-radius: 12px;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(to right, #F06B29, #431803) border-box;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.nav-overlay__login:hover {
+  color: #fff;
+}
+
+/* ---- Нижняя часть ---- */
+.nav-overlay__footer {
+  padding: 20px 28px 32px;
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease 0.28s, transform 0.35s ease 0.28s;
+}
+
+.nav-overlay.is-open .nav-overlay__footer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-overlay__contact-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 6px;
+}
+
+.nav-overlay__contact-link {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: color 0.2s;
+}
+
+.nav-overlay__contact-link:hover {
+  color: #fff;
+}
+
+.nav-overlay__socials {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-overlay__social-link {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.nav-overlay__social-link:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+/* ---- Медиа ---- */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+     z-index: 100000;
+  }
+
+  .header__nav {
+    display: none !important;
+  }
+
+  .header__login {
+    display: none;
+  }
+
+  .nav-backdrop {
+    display: block;
+  }
+
+  body.nav-is-open {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-overlay,
+  .nav-backdrop {
+    display: none !important;
+  }
+}

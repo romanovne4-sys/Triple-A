@@ -1,0 +1,654 @@
+
+
+
+@media (max-width: 1024px) {
+
+  body {
+    font-size: 1.6vw;
+  }
+
+  /* Header */
+  .header__inner {
+    padding-top: 4vw;
+  }
+
+  .header__nav {
+    margin-left: 0;
+    position: static;
+  }
+
+  .nav__list {
+    gap: 3vw;
+  }
+
+  .nav__link {
+    font-size: 1.6vw;
+  }
+
+  .nav__link::after {
+    bottom: -1.2vw;
+    height: 0.2vw;
+  }
+
+  .header__logo-img {
+    width: 8vw;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 7.5vw;
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: 11vh;
+  }
+
+  .hero__subtitle {
+    margin-left: 0;
+    max-width: 36vw;
+    font-size: 1.6vw;
+    margin-top: 3vw;
+  }
+
+  /* Lead */
+  .lead {
+    padding: 9vw 0;
+  }
+
+  .lead__title {
+    margin-left: 0;
+    font-size: 7.5vw;
+    margin-bottom: 6vw;
+  }
+
+  .lead__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+  }
+
+  .lead__card:nth-child(4) {
+    grid-column: 1;
+  }
+
+  .lead__card:nth-child(5) {
+    grid-column: 2;
+  }
+
+  .lead__card {
+    border-radius: 4vw;
+    padding: 4vw 3vw 7vw;
+    min-height: auto;
+  }
+
+  .lead__card-title {
+    font-size: 3vw;
+    margin-bottom: 2vw;
+  }
+
+  .lead__card-text {
+    font-size: 1.6vw;
+    max-width: 100%;
+  }
+
+  .lead__card-icon {
+    margin-bottom: 5vw;
+  }
+
+  .lead__card-dot {
+    width: 1.4vw;
+    height: 1.4vw;
+    bottom: 2.5vw;
+    right: 3vw;
+  }
+
+  /* Suite */
+  .suite {
+    padding: 8vw 0 10vw;
+  }
+
+  .suite__title {
+    font-size: 7.5vw;
+    margin-bottom: 8vw;
+  }
+
+  .suite__item-text {
+    font-size: 5vw;
+  }
+
+  .suite__item {
+    padding: 3.5vw 0;
+  }
+
+  .suite__item svg {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  /* Карточка suite следует за мышью — на планшете оставляем, но чуть меньше */
+  .suite__card {
+    min-width: 36vw;
+    max-width: 36vw;
+    min-height: auto;
+    padding: 4vw;
+  }
+
+  .suite__card-title {
+    font-size: 4.5vw;
+    max-width: 22vw;
+  }
+
+  .suite__card-text {
+    font-size: 1.6vw;
+    max-width: 18vw;
+  }
+
+  .suite__card-tag {
+    font-size: 1.2vw;
+    padding: 0.8vw 1.2vw;
+    border-radius: 1.8vw;
+    margin-bottom: 5vw;
+  }
+
+  /* Trusted */
+  .trusted {
+    padding: 10vw 0;
+  }
+
+  .trusted__title {
+    font-size: 7.5vw;
+    margin-bottom: 6vw;
+  }
+
+  .trusted__inner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    margin-bottom: 12vw;
+  }
+
+  .trusted__card {
+    border-radius: 4vw;
+    padding: 8vw 3vw;
+    min-height: auto;
+    min-width: unset;
+    max-width: unset;
+  }
+
+  .trusted__card-title {
+    font-size: 3.5vw;
+    margin-bottom: 6vw;
+  }
+
+  .trusted__card-text {
+    font-size: 1.5vw;
+    max-width: 100%;
+  }
+
+  .trusted__card-icon svg {
+    width: 2vw;
+    height: 2vw;
+    margin-bottom: 3vw;
+  }
+
+  /* Move money */
+  .move-money-text {
+    font-size: 7vw;
+    max-width: 60vw;
+  }
+
+  .move-money__inner {
+    min-height: 60vw;
+    padding: 10vw 2vw 8vw;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 12vw 0 8vw;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 6vw 8vw;
+  }
+
+  .footer__desc {
+    grid-column: 1 / -1;
+    font-size: 1.4vw;
+  }
+
+  .footer__col:nth-child(2),
+  .footer__col:nth-child(3),
+  .footer__col:nth-child(4) {
+    grid-column: unset;
+    grid-row: unset;
+    margin-bottom: 0;
+  }
+
+  .footer__col-title {
+    font-size: 1.8vw;
+    margin-bottom: 3vw;
+  }
+
+  .footer__link {
+    font-size: 1.5vw;
+  }
+
+  .footer__list {
+    gap: 2vw;
+  }
+
+  .footer__logo-img {
+    width: 8vw;
+    margin-bottom: 2vw;
+  }
+
+  /* Custom cursor — оставляем */
+  .custom-cursor {
+    width: 1.4vw;
+    height: 1.4vw;
+  }
+
+  .custom-cursor.hover {
+    width: 4.5vw;
+    height: 4.5vw;
+  }
+}
+
+
+/* ========== MOBILE (max 768px) ========== */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 3.8vw;
+    /* Отключаем кастомный курсор на тач-устройствах */
+  }
+
+  /* Скрываем кастомный курсор на мобилках */
+  .custom-cursor {
+    display: none !important;
+  }
+
+  *,
+  iframe {
+    cursor: auto !important;
+  }
+
+  .container-fluid {
+    padding: 0 5vw;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 11vw;
+  }
+
+  /* ---- HEADER ---- */
+  .header__inner {
+    padding-top: 6vw;
+    flex-wrap: wrap;
+    gap: 4vw;
+  }
+
+  .header__logo-img {
+    width: 22vw;
+  }
+
+  .header__nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    position: static;
+  }
+
+  .nav__list {
+    flex-wrap: wrap;
+    gap: 4vw 6vw;
+    justify-content: flex-start;
+  }
+
+  .nav__link {
+    font-size: 3.5vw;
+  }
+
+  .nav__link::after {
+    bottom: -1.5vw;
+    height: 0.3vw;
+  }
+
+  .header__login {
+    font-size: 3.5vw;
+  }
+
+  /* ---- HERO ---- */
+
+      spline-viewer {
+        display: none;
+    }
+    .overplay{
+        display: none;
+    }
+  .hero__inner {
+    background-image: url(../images/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+
+    padding-top: 120px;
+    height: auto;
+    min-height: 100vh;
+  }
+  .spline-viewer{
+    height: 135vh;
+  }
+
+  .hero__title {
+  font-size: clamp(52px, 14vw, 80px); /* фиксированный размер вместо vh */
+    align-items: flex-start;            /* выравнивание влево */
+    letter-spacing: -0.03em;
+    margin-bottom: 6vw;
+  }
+
+  .hero__subtitle {
+    margin-left: 0;
+    max-width: 75vw;
+    font-size: 3.8vw;
+    line-height: 1.5;
+  }
+
+  /* ---- LEAD ---- */
+  .lead {
+    padding: 16vw 0;
+  }
+
+  .lead__title {
+    margin-left: 0;
+    font-size: 11vw;
+    margin-bottom: 10vw;
+    gap: 4vw;
+  }
+
+  .lead__grid {
+    grid-template-columns: 1fr;
+    gap: 4vw;
+  }
+
+  .lead__card:nth-child(4),
+  .lead__card:nth-child(5) {
+    grid-column: 1;
+  }
+
+  .lead__card {
+    border-radius: 7vw;
+    padding: 7vw 6vw 10vw;
+    min-height: auto;
+  }
+
+  .lead__card-icon {
+    margin-bottom: 8vw;
+  }
+
+  .lead__card-icon svg {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .lead__card-title {
+    font-size: 6.5vw;
+    margin-bottom: 4vw;
+  }
+
+  .lead__card-text {
+    font-size: 3.8vw;
+    max-width: 100%;
+    line-height: 1.55;
+  }
+
+  .lead__card-dot {
+    width: 3vw;
+    height: 3vw;
+    bottom: 4vw;
+    right: 5vw;
+  }
+
+  /* ---- SUITE ---- */
+  .suite {
+    padding: 16vw 0 18vw;
+  }
+
+  .suite__title {
+    font-size: 11vw;
+    margin-bottom: 10vw;
+  }
+
+  .suite__item {
+    padding: 6vw 0;
+  }
+
+  .suite__item-text {
+    font-size: 8vw;
+    letter-spacing: -0.02em;
+  }
+
+  .suite__item svg {
+    width: 5.5vw;
+    height: 5.5vw;
+  }
+
+  /* Карточка suite на мобилке — скрываем floating card, показываем статично под списком */
+  .suite__card-wrap {
+    position: static !important;
+    transform: none !important;
+    pointer-events: auto;
+    opacity: 1 !important;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 8vw;
+    display: none; /* по умолчанию скрыта */
+  }
+
+  .suite__card-wrap.mobile-visible {
+    display: block;
+  }
+
+  .suite__card {
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+    min-height: auto;
+    padding: 8vw;
+    border-radius: 8vw;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto;
+  }
+
+  .suite__card-tag {
+    font-size: 3.5vw;
+    padding: 2vw 3.5vw;
+    border-radius: 4vw;
+    margin-bottom: 8vw;
+  }
+
+  .suite__card-title {
+    font-size: 8vw;
+    max-width: 100%;
+    margin-bottom: 5vw;
+  }
+
+  .suite__card-text {
+    font-size: 3.8vw;
+    max-width: 100%;
+    line-height: 1.6;
+  }
+
+  /* ---- TRUSTED ---- */
+  .trusted {
+    padding: 16vw 0;
+  }
+
+  .trusted__title {
+    font-size: 11vw;
+    margin-bottom: 10vw;
+  }
+
+  .trusted__inner {
+    grid-template-columns: 1fr;
+    gap: 4vw;
+    margin-bottom: 16vw;
+  }
+
+  .trusted__card {
+    border-radius: 7vw;
+    padding: 10vw 7vw 12vw;
+    min-height: auto;
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  .trusted__card-icon svg {
+    width: 6vw;
+    height: 6vw;
+    margin-bottom: 5vw;
+  }
+
+  .trusted__card-title {
+    font-size: 8vw;
+    margin-bottom: 8vw;
+  }
+
+  .trusted__card-text {
+    font-size: 3.8vw;
+    max-width: 100%;
+    line-height: 1.55;
+  }
+
+  /* ---- MOVE MONEY ---- */
+  .move-money-text {
+    font-size: 10vw;
+    max-width: 90vw;
+    line-height: 1.1;
+  }
+
+  .move-money__inner {
+    min-height: 120vw;
+    padding: 15vw 0 10vw;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer {
+    padding: 20vw 0 12vw;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 10vw;
+  }
+
+  .footer__desc {
+    grid-column: 1;
+    font-size: 3.5vw;
+  }
+
+  .footer__logo-img {
+    width: 28vw;
+    margin-bottom: 4vw;
+    display: block;
+  }
+
+  .footer__col:nth-child(2),
+  .footer__col:nth-child(3),
+  .footer__col:nth-child(4) {
+    grid-column: 1;
+    grid-row: unset;
+    margin-bottom: 0;
+  }
+
+  .footer__col-title {
+    font-size: 4.5vw;
+    margin-bottom: 5vw;
+  }
+
+  .footer__link {
+    font-size: 3.8vw;
+  }
+
+  .footer__list {
+    gap: 4vw;
+  }
+}
+
+
+/* ========== SMALL MOBILE (max 480px) ========== */
+@media (max-width: 480px) {
+
+  .container-fluid {
+    padding: 0 5.5vw;
+  }
+
+  .section-title {
+    font-size: 12.5vw;
+  }
+
+  .hero__title {
+    font-size: 18vw;
+  }
+
+  .hero__subtitle {
+    font-size: 4.2vw;
+    max-width: 85vw;
+  }
+
+  .lead__title,
+  .suite__title,
+  .trusted__title {
+    font-size: 12.5vw;
+  }
+
+  .lead__card-title {
+    font-size: 7.5vw;
+  }
+
+  .suite__item-text {
+    font-size: 9vw;
+  }
+
+  .suite__card-title {
+    font-size: 9vw;
+  }
+
+  .trusted__card-title {
+    font-size: 9.5vw;
+  }
+
+  .move-money-text {
+    font-size: 11.5vw;
+  }
+
+  .footer__col-title {
+    font-size: 5vw;
+  }
+}
+
+
+/* ========== MOBILE — Suite JS patch ========== */
+/*
+  На мобилках карточка suite не следует за курсором,
+  а показывается статично под активным пунктом.
+  Добавь в конец script.js:
+
+  if (window.innerWidth <= 768) {
+    suiteItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const data = suiteCards[item.dataset.key];
+        if (!data) return;
+        cardTag.textContent = data.tag;
+        cardTitle.textContent = data.title;
+        cardText.textContent = data.text;
+        suiteCardWrap.classList.add('mobile-visible');
+        suiteCard.style.opacity = '1';
+        suiteItems.forEach(i => i.classList.remove('suite__item--hovered'));
+        item.classList.add('suite__item--hovered');
+      });
+    });
+  }
+*/
