@@ -329,9 +329,9 @@
         display: none;
     }
   .hero__inner {
-    background-image: url(../images/image12.png);
+    /* background-image: url(../images/image12.png);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 
     padding-top: 120px;
     height: auto;
@@ -339,9 +339,10 @@
   }
   .bg{
     padding: 40px 0;
-     background-image: url(../images/Group.webp);
+     background-image: url(../images/image12.png);
     background-size: cover;
     background-position: center;
+    height: 100vh;
   }
   .spline-viewer{
     height: 135vh;
