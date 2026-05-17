@@ -343,6 +343,7 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
+    margin-bottom: 70px;
   }
   .spline-viewer{
     height: 100vh;

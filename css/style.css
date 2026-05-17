@@ -335,7 +335,7 @@ a.form__link:not(.form__link--underline):hover {
 
 .lead {
     padding: 7vw 0vw;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .lead__title {
