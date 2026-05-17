@@ -329,9 +329,9 @@
         display: none;
     }
   .hero__inner {
-    /* background-image: url(../images/Group.webp);
+    background-image: url(../images/hero-bg.png);
     background-size: cover;
-    background-position: center; */
+    background-position: center;
 
     padding-top: 120px;
     height: auto;
@@ -536,7 +536,7 @@
   }
 
   .move-money__inner {
-    min-height: 120vw;
+    /* min-height: 120vw; */
     padding: 15vw 0 10vw;
   }
 
