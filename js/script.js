@@ -588,81 +588,53 @@ if (!isTouchDevice) {
 
 
 // ================= SMOOTH SCROLL =================
-
-(function () {
-    const isTouchDevice = window.matchMedia(
-    '(hover: none), (pointer: coarse)'
-).matches;
-
-if (isTouchDevice) return;
-
+(function() {
     const ease = 0.05;
-
     let currentY = window.scrollY;
     let targetY = currentY;
-
     let ticking = false;
 
     function getHeroHeight() {
-
+        const hero = document.querySelector('.hero, spline-viewer');
+        // берём высоту hero-секции, fallback — 100vh
         const lead = document.querySelector('.lead');
-
-        if (lead) {
-            return lead.offsetTop;
-        }
-
+        if (lead) return lead.offsetTop;
         return window.innerHeight;
     }
 
     window.addEventListener('wheel', e => {
-
         e.preventDefault();
 
         const heroEnd = getHeroHeight();
 
+        // Если скролл вниз и мы ещё в пределах hero — прыгаем к lead
         if (e.deltaY > 0 && currentY < heroEnd - 10) {
             targetY = heroEnd;
         } else {
             targetY += e.deltaY;
         }
 
-        targetY = Math.max(
-            0,
-            Math.min(
-                targetY,
-                document.body.scrollHeight - window.innerHeight
-            )
-        );
+        targetY = Math.max(0, Math.min(targetY, document.body.scrollHeight - window.innerHeight));
 
         if (!ticking) {
             requestAnimationFrame(update);
             ticking = true;
         }
-
-    }, {
-        passive: false
-    });
+    }, { passive: false });
 
     function update() {
-
         currentY += (targetY - currentY) * ease;
 
         if (Math.abs(targetY - currentY) < 0.5) {
-
             currentY = targetY;
             ticking = false;
-
         } else {
-
             requestAnimationFrame(update);
         }
 
         window.scrollTo(0, currentY);
     }
-
 })();
-
-
 
 // ================= BURGER =================
 
