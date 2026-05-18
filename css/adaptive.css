@@ -329,11 +329,11 @@
         display: none;
     }
   .hero__inner {
-        display: flex;
-        align-items: center;
+        /* display: flex;
+        align-items: center; */
 
-    /* padding-top: 120px; */
-    height: auto;
+    padding-top: 120px;
+    /* height: auto; */
 
     min-height: 100vh;
     min-height: 100svh;
