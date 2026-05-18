@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const isTouchDevice = window.matchMedia(
+    '(hover: none), (pointer: coarse)'
+).matches;
 
     // ================= HEADER =================
 
@@ -227,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // mouse follow
 
-        if (window.innerWidth > 768) {
+       if (!isTouchDevice) {
 
             let mouseX = 0;
             let mouseY = 0;
@@ -416,7 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // mobile
 
-        if ('ontouchstart' in window || window.innerWidth <= 768) {
+       if (isTouchDevice) {
 
             suiteItems.forEach(item => {
 
@@ -520,53 +523,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // ================= CUSTOM CURSOR =================
+  // ================= CUSTOM CURSOR =================
 
-    if (window.innerWidth > 768) {
+if (!isTouchDevice) {
 
-        const cursor = document.querySelector('.custom-cursor');
+    const cursor = document.querySelector('.custom-cursor');
 
-        if (cursor) {
+    if (cursor) {
 
-            let mouseX = 0;
-            let mouseY = 0;
+        let mouseX = 0;
+        let mouseY = 0;
 
-            let posX = 0;
-            let posY = 0;
+        let posX = 0;
+        let posY = 0;
 
-            const speed = 0.15;
+        const speed = 0.15;
 
-            window.addEventListener('mousemove', e => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
+        window.addEventListener('mousemove', e => {
+
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        document.querySelectorAll('a, button, li').forEach(el => {
+
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
             });
 
-            document.querySelectorAll('a, button, li').forEach(el => {
-
-                el.addEventListener('mouseenter', () => {
-                    cursor.classList.add('hover');
-                });
-
-                el.addEventListener('mouseleave', () => {
-                    cursor.classList.remove('hover');
-                });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
             });
+        });
 
-            function animateCursor() {
+        function animateCursor() {
 
-                posX += (mouseX - posX) * speed;
-                posY += (mouseY - posY) * speed;
+            posX += (mouseX - posX) * speed;
+            posY += (mouseY - posY) * speed;
 
-                cursor.style.transform =
-                    `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
+            cursor.style.transform =
+                `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
 
-                requestAnimationFrame(animateCursor);
-            }
-
-            animateCursor();
+            requestAnimationFrame(animateCursor);
         }
-    }
 
+        animateCursor();
+    }
+}
 
 
     // ================= OVERLAY FIX =================
@@ -587,6 +590,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // ================= SMOOTH SCROLL =================
 
 (function () {
+    const isTouchDevice = window.matchMedia(
+    '(hover: none), (pointer: coarse)'
+).matches;
+
+if (isTouchDevice) return;
 
     const ease = 0.05;
 
