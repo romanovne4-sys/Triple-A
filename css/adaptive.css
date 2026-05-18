@@ -335,14 +335,16 @@
 
     padding-top: 120px;
     height: auto;
-    height: 100vh;
+
+    min-height: 70vh;
+    min-height: 70svh;
   }
   .bg-768{
     padding: 40px 0;
      background-image: url(../images/image12.png);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+
     /* margin-bottom: 70px; */
   }
   .spline-viewer{

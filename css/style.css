@@ -276,18 +276,11 @@ a.form__link:not(.form__link--underline):hover {
 
 /* HERO */
 
-.hero {
-    position: relative;
-    padding-top: 6.2vw;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.hero spline-viewer {
+ spline-viewer {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100svh;
     z-index: 1;
 }
 
