@@ -329,18 +329,17 @@
         display: none;
     }
   .hero__inner {
-    /* background-image: url(../images/image12.png);
-    background-size: cover;
-    background-position: center; */
+        display: flex;
+        align-items: center;
 
-    padding-top: 120px;
+    /* padding-top: 120px; */
     height: auto;
 
-    min-height: 70vh;
-    min-height: 70svh;
+    min-height: 100vh;
+    min-height: 100svh;
   }
   .bg-768{
-    padding: 40px 0;
+    /* padding: 40px 0; */
      background-image: url(../images/image12.png);
     background-size: cover;
     background-position: center;
