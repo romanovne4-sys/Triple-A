@@ -4,7 +4,7 @@
 @media (max-width: 1024px) {
 
   body {
-    font-size: 1.6vw;
+     font-size: clamp(14px, 1.6vw, 18px);
   }
 
   /* Header */
@@ -337,7 +337,7 @@
     height: auto;
     height: 100vh;
   }
-  .bg{
+  .bg-768{
     padding: 40px 0;
      background-image: url(../images/image12.png);
     background-size: cover;
@@ -350,8 +350,8 @@
   }
 
   .hero__title {
-  font-size: clamp(52px, 14vw, 80px); /* фиксированный размер вместо vh */
-    align-items: flex-start;            /* выравнивание влево */
+  font-size: clamp(52px, 14vw, 80px);
+    align-items: flex-start;
     letter-spacing: -0.03em;
     margin-bottom: 6vw;
   }
